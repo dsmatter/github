@@ -212,7 +212,7 @@ makeHttpRequest auth r = case r of
     setReqHeaders req = req { requestHeaders = reqHeaders <> requestHeaders req }
 
     setCheckStatus :: Request -> Request
-    setCheckStatus req = req { checkStatus = successOrMissing }
+    setCheckStatus req = req
 
     setMethod :: Method -> Request -> Request
     setMethod m req = req { method = m }
@@ -232,10 +232,6 @@ makeHttpRequest auth r = case r of
     getOAuthHeader :: GithubAuth -> RequestHeaders
     getOAuthHeader (GithubOAuth token) = [("Authorization", BS8.pack ("token " ++ token))]
     getOAuthHeader _                   = []
-
-    successOrMissing s@(Status sci _) hs cookiejar
-      | (200 <= sci && sci < 300) || sci == 404 = Nothing
-      | otherwise = Just $ E.toException $ StatusCodeException s hs cookiejar
 
 -- | Get Link rel=next from request headers.
 getNextUrl :: Response a -> Maybe URI

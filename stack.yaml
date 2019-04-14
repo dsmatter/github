@@ -1,1 +1,7 @@
-stack-lts-3.yaml
+resolver: lts-13.16
+packages:
+- '.'
+extra-deps: []
+flags:
+  github:
+     aeson-compat: true

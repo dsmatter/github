@@ -177,7 +177,7 @@ Library
                  network-uri,
                  old-locale,
                  text,
-                 time >=1.4 && <1.6,
+                 time >=1.4,
                  transformers,
                  transformers-compat,
                  unordered-containers >= 0.2 && < 0.3,

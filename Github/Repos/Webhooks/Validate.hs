@@ -15,8 +15,6 @@ import           Crypto.Hash
 import           Data.Byteable          (constEqBytes, toBytes)
 import qualified Data.ByteString.Base16 as Hex
 import qualified Data.ByteString.Char8  as BS
-import           Data.Monoid
-
 
 -- | Validates a given payload against a given HMAC hexdigest using a given
 -- secret.
