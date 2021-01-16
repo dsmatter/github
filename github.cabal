@@ -1,5 +1,5 @@
 Name:                github
-Version:             0.14.0
+Version:             0.14.1
 Synopsis:            Access to the Github API, v3.
 Description:         The Github API provides programmatic access to the full
                      Github Web site, from Issues to Gists to repos down to the underlying git data
